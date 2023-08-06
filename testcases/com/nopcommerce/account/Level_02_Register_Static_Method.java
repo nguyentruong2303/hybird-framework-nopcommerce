@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_03_Register_Static_Method {
+public class Level_02_Register_Static_Method {
 
     private WebDriver driver;
 
