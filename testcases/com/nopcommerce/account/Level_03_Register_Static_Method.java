@@ -1,10 +1,8 @@
 package com.nopcommerce.account;
 
 import commons.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,11 +11,11 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_02_Register_Init {
+public class Level_03_Register_Static_Method {
 
-    WebDriver driver;
-    BasePage basePage;
+    private WebDriver driver;
 
+    private BasePage basePage = BasePage.getBasePage();
 
     @BeforeClass
     public void BeforeClass() {
@@ -26,7 +24,7 @@ public class Level_02_Register_Init {
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        basePage = new BasePage();
+       // basePage = new BasePage();
     }
 
     @Test

@@ -3,8 +3,11 @@
 <suite name="NopCommerce">
     <test name="Run on firefox">
         <classes>
-            <class name="com.nopcommerce.account.Level_01_Register"></class>
-            <class name="com.nopcommerce.account.Level_02_Register_Init"></class>
+<!--            <class name="com.nopcommerce.account.Level_01_Register"></class>-->
+<!--            <class name="com.nopcommerce.account.Level_02_Register_Init"></class>-->
+<!--            <class name="com.nopcommerce.account.Level_03_Register_Static_Method"></class>-->
+            <class name="com.nopcommerce.account.Level_04_Register_Inheritance"></class>
+
         </classes>
     </test>
 </suite>
