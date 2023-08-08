@@ -7,4 +7,22 @@
             <class name="com.nopcommerce.account.Level_03_Register_PageObject"></class>
         </classes>
     </test>
+    <test name="Run on chrome">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="com.nopcommerce.account.Level_03_Register_PageObject"></class>
+        </classes>
+    </test>
+    <test name="Run on EDGE">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="com.nopcommerce.account.Level_03_Register_PageObject"></class>
+        </classes>
+    </test>
+    <test name="Run on Opera">
+        <parameter name="browser" value="Opera"/>
+        <classes>
+            <class name="com.nopcommerce.account.Level_03_Register_PageObject"></class>
+        </classes>
+    </test>
 </suite>

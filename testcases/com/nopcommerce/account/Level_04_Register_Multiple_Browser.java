@@ -1,11 +1,13 @@
 package com.nopcommerce.account;
 
 import commons.BasePage;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.CustomerPageObject;
 import pageObjects.HomePageObject;
@@ -15,7 +17,7 @@ import pageObjects.RegisterPageObject;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_04_Register_Multiple_Browser extends BasePage{
+public class Level_04_Register_Multiple_Browser extends BaseTest {
 
     WebDriver driver;
     private HomePageObject homePage;
@@ -25,18 +27,18 @@ public class Level_04_Register_Multiple_Browser extends BasePage{
     private String emailAddress = getRandomEmail();
 
 
+    @Parameters("browser")
     @BeforeClass
-    public void BeforeClass() {
-
-        openPageUrl(driver, "https://demo.nopcommerce.com/");
-        homePage = new HomePageObject(driver);
+    public void BeforeClass(String browserName) {
+        driver = getBrowserDriver(browserName);
+        homePage.clickToRegisterLink();
 
     }
 
     @Test
     public void User_01_Register_Empty_Data() {
 
-        homePage.clickToRegisterLink();
+        homePage = new HomePageObject(driver);
 
         registerPage = new RegisterPageObject(driver);
         registerPage.clickToElementRegisterButton();
@@ -156,14 +158,11 @@ public class Level_04_Register_Multiple_Browser extends BasePage{
 
     }
 
-    public String getRandomEmail() {
-        Random rand = new Random();
-        return "automation" + rand.nextLong(9999) + "@gmail.com";
-    }
+
 
     @AfterClass
     public void AfterClass() {
-        driver.quit();
+        quitBrowser();
     }
 
 
