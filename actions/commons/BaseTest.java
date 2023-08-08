@@ -12,11 +12,27 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    WebDriver driver;
-    String path = System.getProperty("user.dir");
+    private WebDriver driver;
+    private String path = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName) {
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
+//        if (browser == BrowserList.FIREFOX) {
+//            System.setProperty("webdriver.gecko.driver", path + "\\browserDrivers\\geckodriver.exe");
+//            driver = new FirefoxDriver();
+//        } else if (browser == BrowserList.CHROME) {
+//            System.setProperty("webdriver.chrome.driver", path + "\\browserDrivers\\chromedriver.exe");
+//            driver = new ChromeDriver();
+//        } else if (browser == BrowserList.EDGE) {
+//            System.setProperty("webdriver.edge.driver", path + "\\browserDrivers\\msedgedriver.exe");
+//            driver = new EdgeDriver();
+//        } else if (browser == BrowserList.OPERA) {
+//            System.setProperty("webdriver.opera.driver", path + "\\browserDrivers\\operadriver.exe");
+//            driver = new OperaDriver();
+//        } else {
+//            System.out.println("Browser is invalid");
+//        }
+
         switch (browser) {
             case FIREFOX:
                 System.setProperty("webdriver.gecko.driver", path + "\\browserDrivers\\geckodriver.exe");

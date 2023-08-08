@@ -31,14 +31,15 @@ public class Level_04_Register_Multiple_Browser extends BaseTest {
     @BeforeClass
     public void BeforeClass(String browserName) {
         driver = getBrowserDriver(browserName);
-        homePage.clickToRegisterLink();
+        homePage = new HomePageObject(driver);
 
     }
 
     @Test
     public void User_01_Register_Empty_Data() {
 
-        homePage = new HomePageObject(driver);
+
+        homePage.clickToRegisterLink();
 
         registerPage = new RegisterPageObject(driver);
         registerPage.clickToElementRegisterButton();
