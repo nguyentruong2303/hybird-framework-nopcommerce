@@ -1,5 +1,6 @@
 package commons;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,38 +18,18 @@ public class BaseTest {
 
     protected WebDriver getBrowserDriver(String browserName) {
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
-//        if (browser == BrowserList.FIREFOX) {
-//            System.setProperty("webdriver.gecko.driver", path + "\\browserDrivers\\geckodriver.exe");
-//            driver = new FirefoxDriver();
-//        } else if (browser == BrowserList.CHROME) {
-//            System.setProperty("webdriver.chrome.driver", path + "\\browserDrivers\\chromedriver.exe");
-//            driver = new ChromeDriver();
-//        } else if (browser == BrowserList.EDGE) {
-//            System.setProperty("webdriver.edge.driver", path + "\\browserDrivers\\msedgedriver.exe");
-//            driver = new EdgeDriver();
-//        } else if (browser == BrowserList.OPERA) {
-//            System.setProperty("webdriver.opera.driver", path + "\\browserDrivers\\operadriver.exe");
-//            driver = new OperaDriver();
-//        } else {
-//            System.out.println("Browser is invalid");
-//        }
-
         switch (browser) {
             case FIREFOX:
-                System.setProperty("webdriver.gecko.driver", path + "\\browserDrivers\\geckodriver.exe");
-                driver = new FirefoxDriver();
+                driver = WebDriverManager.firefoxdriver().create();
                 break;
             case CHROME:
-                System.setProperty("webdriver.chrome.driver", path + "\\browserDrivers\\chromedriver.exe");
-                driver = new ChromeDriver();
+                driver = WebDriverManager.chromedriver().create();
                 break;
             case EDGE:
-                System.setProperty("webdriver.edge.driver", path + "\\browserDrivers\\msedgedriver.exe");
-                driver = new EdgeDriver();
+                driver = WebDriverManager.edgedriver().create();
                 break;
             case OPERA:
-                System.setProperty("webdriver.opera.driver", path + "\\browserDrivers\\operadriver.exe");
-                driver = new OperaDriver();
+                driver = WebDriverManager.operadriver().create();
                 break;
             default:
                 System.out.println("Browser is invalid");

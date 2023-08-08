@@ -4,25 +4,25 @@
     <test name="Run on Firefox">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_04_Register_Multiple_Browser"></class>
+            <class name="com.nopcommerce.account.Level_05_Register_WebDriverManager"></class>
         </classes>
     </test>
     <test name="Run on chrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_04_Register_Multiple_Browser"></class>
+            <class name="com.nopcommerce.account.Level_05_Register_WebDriverManager"></class>
         </classes>
     </test>
     <test name="Run on EDGE">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_04_Register_Multiple_Browser"></class>
+            <class name="com.nopcommerce.account.Level_05_Register_WebDriverManager"></class>
         </classes>
     </test>
     <test name="Run on Opera">
         <parameter name="browser" value="Opera"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_04_Register_Multiple_Browser"></class>
+            <class name="com.nopcommerce.account.Level_05_Register_WebDriverManager"></class>
         </classes>
     </test>
 </suite>
