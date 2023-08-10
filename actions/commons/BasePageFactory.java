@@ -5,45 +5,48 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BasePageFactory {
-    public void openPageUrl(WebDriver driver, String urlPage) {
+    protected void openPageUrl(WebDriver driver, String urlPage) {
         driver.get(urlPage);
     }
 
-    public String getPageTitle(WebDriver driver) {
+    protected String getPageTitle(WebDriver driver) {
         return driver.getTitle();
     }
 
-    public String getCurrentPageUrl(WebDriver driver) {
+    protected String getCurrentPageUrl(WebDriver driver) {
         return driver.getCurrentUrl();
     }
 
-    public String getPageResource(WebDriver driver) {
+    protected String getPageResource(WebDriver driver) {
         return driver.getPageSource();
     }
 
-    public void backToPage(WebDriver driver) {
+    protected void backToPage(WebDriver driver) {
         driver.navigate().back();
     }
 
-    public void forwardToPage(WebDriver driver) {
+    protected void forwardToPage(WebDriver driver) {
         driver.navigate().forward();
     }
 
-    public void refreshPageCurrent(WebDriver driver) {
+    protected void refreshPageCurrent(WebDriver driver) {
         driver.navigate().refresh();
     }
 
 
-    public void clickToElement(WebDriver driver, WebElement element) {
+    protected void clickToElement(WebDriver driver, WebElement element) {
         element.click();
     }
 
-    public String getTextElement(WebDriver driver, WebElement element) {
+    protected String getTextElement(WebDriver driver, WebElement element) {
         return element.getText();
     }
 
 
-    public void sendkeyToElement(WebDriver driver, WebElement element, String valueToSend) {
+    protected void sendkeyToElement(WebDriver driver, WebElement element, String valueToSend) {
        element.sendKeys(valueToSend);
+    }
+    protected String getAttributeValue(WebDriver driver, WebElement element, String attributeName) {
+        return element.getAttribute(attributeName);
     }
 }
