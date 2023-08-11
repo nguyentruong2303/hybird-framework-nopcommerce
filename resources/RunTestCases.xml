@@ -4,10 +4,7 @@
     <test name="Run on Firefox">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_07_Page_Manager_Part1"></class>
-            <class name="com.nopcommerce.account.Level_07_Page_Manager_Part2"></class>
-            <class name="com.nopcommerce.account.Level_07_Page_Manager_Part3"></class>
-
+            <class name="com.nopcommerce.account.Level_08_Switch_Page"></class>
         </classes>
     </test>
 
