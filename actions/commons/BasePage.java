@@ -46,7 +46,7 @@ public class BasePage {
     }
 
     public Alert waitAlertPresence(WebDriver driver) {
-        return new WebDriverWait(driver, 30).until(ExpectedConditions.alertIsPresent());
+        return new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.alertIsPresent());
     }
 
     public void acceptToAlert(WebDriver driver) {
@@ -105,16 +105,35 @@ public class BasePage {
         }
     }
 
+    public By getByLocator(String locator) {
+        By by = null;
+        if (locator.startsWith("xpath=") || locator.startsWith("Xpath=") || locator.startsWith("XPATH=") || locator.startsWith("xPath=")) {
+            by = By.xpath(locator.substring(6));
+        } else if (locator.startsWith("css=") || locator.startsWith("Css=") || locator.startsWith("CSS=")) {
+            by = By.cssSelector(locator.substring(4));
+        } else if (locator.startsWith("id=") || locator.startsWith("Id=") || locator.startsWith("ID=")) {
+            by = By.id(locator.substring(3));
+        } else if (locator.startsWith("class=") || locator.startsWith("Class=") || locator.startsWith("CLASS=")) {
+            by = By.className(locator.substring(6));
+        } else if (locator.startsWith("name=") || locator.startsWith("Name=") || locator.startsWith("NAME=")) {
+            by = By.className(locator.substring(5));
+        } else {
+            throw new RuntimeException("By Locator is invalid");
+        }
+
+        return by;
+    }
+
     public By getElementByXpath(String locator) {
         return By.xpath(locator);
     }
 
     public WebElement getWebElement(WebDriver driver, String locator) {
-        return driver.findElement(getElementByXpath(locator));
+        return driver.findElement(getByLocator(locator));
     }
 
     public List<WebElement> getListWebElement(WebDriver driver, String locator) {
-        return driver.findElements(getElementByXpath(locator));
+        return driver.findElements(getByLocator(locator));
     }
 
     public void clickToElement(WebDriver driver, String locator) {
@@ -142,7 +161,7 @@ public class BasePage {
         getWebElement(driver, parentLocator).click();
         sleepInSecond(1);
 
-        List<WebElement> allItems = new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getElementByXpath(childItemLocator)));
+        List<WebElement> allItems = new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childItemLocator)));
 
         for (WebElement item : allItems) {
             if (item.getText().trim().equals(expectedItem)) {
@@ -202,7 +221,7 @@ public class BasePage {
     }
 
     public void swithToIframe(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
     }
 
     public void swithToDefaultContent(WebDriver driver) {
@@ -277,7 +296,7 @@ public class BasePage {
     }
 
     public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
-        WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+        WebDriverWait explicitWait = new WebDriverWait(driver, GlobalContants.LONG_TIME);
         ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
@@ -305,35 +324,31 @@ public class BasePage {
         boolean status = (boolean) ((JavascriptExecutor) driver).executeScript(
                 "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
                 getWebElement(driver, locator));
-        if (status) {
-            return true;
-        } else {
-            return false;
-        }
+        return status;
     }
 
     public void waitForElementVisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(getElementByXpath(locator)));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementVisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, locator)));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, locator)));
     }
 
     public void waitForElementClickable(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(getElementByXpath(locator)));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
     }
 
     public void waitForElementInvisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(getElementByXpath(locator)));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementInvisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locator)));
+        new WebDriverWait(driver, GlobalContants.LONG_TIME).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locator)));
     }
 
     public boolean isPageLoadedSuccess(WebDriver driver) {
-        WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+        WebDriverWait explicitWait = new WebDriverWait(driver, GlobalContants.LONG_TIME);
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
             @Override
@@ -350,7 +365,6 @@ public class BasePage {
         };
         return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
-
 
 
 }
