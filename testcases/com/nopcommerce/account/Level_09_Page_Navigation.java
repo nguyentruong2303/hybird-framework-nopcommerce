@@ -1,7 +1,6 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -10,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.user.*;
 
-public class Level_08_Switch_Page extends BaseTest {
+public class Level_09_Page_Navigation extends BaseTest {
 
     WebDriver driver;
     private HomePageObject homePage;
@@ -26,8 +25,6 @@ public class Level_08_Switch_Page extends BaseTest {
     private DownloadableProductsPageObject downloadableProducts;
     private MyProductReviewsPageObject myProductReviews;
     private RewardPointsPageObject rewardPoints;
-
-    private MyAccountSideBarPageObject myAccountSideBar;
 
 
     @Parameters("browser")

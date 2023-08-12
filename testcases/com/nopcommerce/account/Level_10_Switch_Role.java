@@ -8,9 +8,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
 import pageObjects.user.*;
 
-public class Level_08_Switch_Page extends BaseTest {
+public class Level_10_Switch_Role extends BaseTest {
 
     WebDriver driver;
     private HomePageObject homePage;
@@ -27,13 +29,19 @@ public class Level_08_Switch_Page extends BaseTest {
     private MyProductReviewsPageObject myProductReviews;
     private RewardPointsPageObject rewardPoints;
 
-    private MyAccountSideBarPageObject myAccountSideBar;
+    private AdminLoginPageObject adminLoginPage;
+
+    private AdminDashboardPageObject adminDashboard;
+
+    String userUrlPage, adminUrlPage;
 
 
-    @Parameters("browser")
+    @Parameters({"browser", "userUrlPage", "adminUrlPage"})
     @BeforeClass
-    public void BeforeClass(String browserName) {
-        driver = getBrowserDriver(browserName);
+    public void BeforeClass(String browserName, String userUrlPage, String adminUrlPage) {
+        this.userUrlPage = userUrlPage;
+        this.adminUrlPage = adminUrlPage;
+        driver = getBrowserDriverWithUrl(browserName,userUrlPage);
     }
 
     @Test
@@ -56,7 +64,7 @@ public class Level_08_Switch_Page extends BaseTest {
 
 
     @Test
-    public void User_02_Login() {
+    public void User_02_Switch_User_To_Admin() {
         homePage = registerPage.clickToNopCommerceLogo();
 
         loginPage = homePage.clickToLoginLink();
@@ -66,33 +74,37 @@ public class Level_08_Switch_Page extends BaseTest {
 
         homePage = loginPage.clickToLoginButton();
 
-        customerPage =  homePage.clickToMyAccountLink();
+        homePage.clickToLogoutLink();
 
-        Assert.assertEquals(customerPage.getFirstNameTextBoxAttributeValue(),"Automation");
-        Assert.assertEquals(customerPage.getLastNameTextBoxAttributeValue(),"FC");
-        Assert.assertEquals(customerPage.getEmailAddressTextBoxAttributeValue(),emailAddress);
+        homePage.openPageUrl(driver, adminUrlPage);
+
+        adminLoginPage = PageGeneratorManager.getAdminLogin(driver);
+
+        adminLoginPage.enterEmailTextbox("admin@yourstore.com");
+        adminLoginPage.enterPasswordTextbox("admin");
+        adminDashboard = adminLoginPage.clickLoginButton();
+        Assert.assertTrue(adminLoginPage.isPageLoadedSuccess(driver));
+
 
     }
 
     @Test
-    public void User_03_Switch_Page() {
-        addressPage = customerPage.openAddressPage(driver);
+    public void User_03_Switch_Admin_To_User() {
+        adminLoginPage = adminDashboard.clickToLogoutLink();
 
-        orderPage = addressPage.openOrdersPage(driver);
+        Assert.assertTrue(adminDashboard.isPageLoadedSuccess(driver));
 
-        downloadableProducts = orderPage.openDownloadableProductsPage(driver);
 
-        backInStockSubscriptions = downloadableProducts.openBackInStockSubscriptionsPage(driver);
+        adminLoginPage.openPageUrl(driver, userUrlPage);
 
-        rewardPoints = backInStockSubscriptions.openRewardPointsPage(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
 
-        changePassword = rewardPoints.openChangePasswordPage(driver);
+        loginPage = homePage.clickToLoginLink();
 
-        myProductReviews = changePassword.openMyProductReviewsPage(driver);
-
-        addressPage = myProductReviews.openAddressPage(driver);
-
-        downloadableProducts = addressPage.openDownloadableProductsPage(driver);
+        loginPage.enterToEmailTextBox(emailAddress);
+        loginPage.enterToPasswordTextBox("123456");
+        homePage = loginPage.clickToLoginButton();
+        homePage.clickToLogoutLink();
 
 
     }

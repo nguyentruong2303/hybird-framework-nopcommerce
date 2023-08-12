@@ -2,14 +2,11 @@ package commons;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.*;
-import pageUIs.BasePageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -125,6 +122,7 @@ public class BasePage {
     }
 
     public void sendkeyToElement(WebDriver driver, String locator, String valueToSend) {
+        getWebElement(driver, locator).clear();
         getWebElement(driver, locator).sendKeys(valueToSend);
     }
 
@@ -334,46 +332,25 @@ public class BasePage {
         new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locator)));
     }
 
+    public boolean isPageLoadedSuccess(WebDriver driver) {
+        WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                return (Boolean) jsExecutor.executeScript("return (window.jQuery != null) && (jQuery.active === 0);");
+            }
+        };
 
-    public AddressPageObject openAddressPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.ADDRESS_LINK_TEXT);
-        clickToElement(driver, BasePageUI.ADDRESS_LINK_TEXT);
-        return PageGeneratorManager.getAddressPage(driver);
+        ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+            }
+        };
+        return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
 
-    public OrdersPageObject openOrdersPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.ORDERS_LINK_TEXT);
-        clickToElement(driver, BasePageUI.ORDERS_LINK_TEXT);
-        return PageGeneratorManager.getOrders(driver);
-    }
 
-    public DownloadableProductsPageObject openDownloadableProductsPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.DOWNLOADABLE_PRODUCTS_LINK_TEXT);
-        clickToElement(driver, BasePageUI.DOWNLOADABLE_PRODUCTS_LINK_TEXT);
-        return PageGeneratorManager.getDownloadableProducts(driver);
-    }
 
-    public BackInStockSubscriptionsPageObject openBackInStockSubscriptionsPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_LINK_TEXT);
-        clickToElement(driver, BasePageUI.BACK_IN_STOCK_SUBSCRIPTION_LINK_TEXT);
-        return PageGeneratorManager.getBackInStockSubcriptions(driver);
-    }
-
-    public RewardPointsPageObject openRewardPointsPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.REWARD_POINTS_LINK_TEXT);
-        clickToElement(driver, BasePageUI.REWARD_POINTS_LINK_TEXT);
-        return PageGeneratorManager.getRewardPoints(driver);
-    }
-
-    public ChangePasswordPageObject openChangePasswordPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.CHANGE_PASSWORD_LINK_TEXT);
-        clickToElement(driver, BasePageUI.CHANGE_PASSWORD_LINK_TEXT);
-        return PageGeneratorManager.getChangePassword(driver);
-    }
-
-    public MyProductReviewsPageObject openMyProductReviewsPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.MY_PRODUCT_REVIEWS_LINK_TEXT);
-        clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEWS_LINK_TEXT);
-        return PageGeneratorManager.getMyProductsReviews(driver);
-    }
 }

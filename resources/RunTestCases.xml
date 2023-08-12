@@ -2,9 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NopCommerce">
     <test name="Run on Firefox">
+
+        <parameter name="userUrlPage" value="https://demo.nopcommerce.com/"/>
+        <parameter name="adminUrlPage" value="https://admin-demo.nopcommerce.com"/>
+
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_08_Switch_Page"></class>
+            <class name="com.nopcommerce.account.Level_10_Switch_Role"></class>
         </classes>
     </test>
 

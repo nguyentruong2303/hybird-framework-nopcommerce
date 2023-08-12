@@ -1,28 +1,23 @@
 package com.nopcommerce.account;
 
-import commons.BasePage;
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
-
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+import pageObjects.user.CustomerPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.UserLoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 public class Level_04_Register_Multiple_Browser extends BaseTest {
 
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private CustomerPageObject customerPage;
     private String emailAddress = getRandomEmail();
 
@@ -140,7 +135,7 @@ public class Level_04_Register_Multiple_Browser extends BaseTest {
         homePage = new HomePageObject(driver);
 
         homePage.clickToLoginLink();
-        loginPage = new LoginPageObject(driver);
+        loginPage = new UserLoginPageObject(driver);
 
         loginPage.enterToEmailTextBox(emailAddress);
         loginPage.enterToPasswordTextBox("123456");

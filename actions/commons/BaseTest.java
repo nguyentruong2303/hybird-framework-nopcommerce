@@ -38,6 +38,28 @@ public class BaseTest {
         driver.get("https://demo.nopcommerce.com/");
         return driver;
     }
+    protected WebDriver getBrowserDriverWithUrl(String browserName, String urlPage) {
+        BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browser) {
+            case FIREFOX:
+                driver = WebDriverManager.firefoxdriver().create();
+                break;
+            case CHROME:
+                driver = WebDriverManager.chromedriver().create();
+                break;
+            case EDGE:
+                driver = WebDriverManager.edgedriver().create();
+                break;
+            case OPERA:
+                driver = WebDriverManager.operadriver().create();
+                break;
+            default:
+                System.out.println("Browser is invalid");
+        }
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.get(urlPage);
+        return driver;
+    }
     public String getRandomEmail() {
         Random rand = new Random();
         return "automation" + rand.nextLong(9999) + "@gmail.com";

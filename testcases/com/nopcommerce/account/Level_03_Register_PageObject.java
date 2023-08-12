@@ -7,10 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.user.CustomerPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.UserLoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +20,7 @@ public class Level_03_Register_PageObject extends BasePage {
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private CustomerPageObject customerPage;
 
     private String emailAddress = getRandomEmail();
@@ -142,7 +142,7 @@ public class Level_03_Register_PageObject extends BasePage {
         homePage = new HomePageObject(driver);
 
         homePage.clickToLoginLink();
-        loginPage = new LoginPageObject(driver);
+        loginPage = new UserLoginPageObject(driver);
 
         loginPage.enterToEmailTextBox(emailAddress);
         loginPage.enterToPasswordTextBox("123456");

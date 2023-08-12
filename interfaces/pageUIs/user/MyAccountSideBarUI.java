@@ -1,6 +1,6 @@
-package pageUIs;
+package pageUIs.user;
 
-public class BasePageUI {
+public class MyAccountSideBarUI {
     public static final String ADDRESS_LINK_TEXT = "//div[@class='side-2']//a[text()='Addresses']";
     public static final String BACK_IN_STOCK_SUBSCRIPTION_LINK_TEXT = "//div[@class='side-2']//a[text()='Back in stock subscriptions']";
     public static final String CHANGE_PASSWORD_LINK_TEXT = "//div[@class='side-2']//a[text()='Change password']";
