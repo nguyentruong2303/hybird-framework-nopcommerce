@@ -8,4 +8,6 @@ public class MyAccountSideBarUI {
     public static final String MY_PRODUCT_REVIEWS_LINK_TEXT = "Xpath=//div[@class='side-2']//a[text()='My product reviews']";
     public static final String ORDERS_LINK_TEXT = "XPATH=//div[@class='side-2']//a[text()='Orders']";
     public static final String REWARD_POINTS_LINK_TEXT = "XPATH=//div[@class='side-2']//a[text()='Reward points']";
+
+    public static final String SIDE_BAR_LINK_TEXT = "XPATH=//div[@class='side-2']//a[text()='%s']";
 }
