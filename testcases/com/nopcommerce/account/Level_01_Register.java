@@ -111,7 +111,7 @@ public class Level_01_Register {
 
     public long getRandom() {
         Random rand = new Random();
-        return rand.nextLong(9999);
+        return rand.nextInt(9999);
     }
 
     @AfterClass

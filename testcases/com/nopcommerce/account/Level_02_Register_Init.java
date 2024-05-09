@@ -115,7 +115,7 @@ public class Level_02_Register_Init {
 
     public String getRandomEmail() {
         Random rand = new Random();
-        return "automation" + rand.nextLong(9999) + "@gmail.com";
+        return "automation" + rand.nextInt(9999) + "@gmail.com";
     }
 
     @AfterClass

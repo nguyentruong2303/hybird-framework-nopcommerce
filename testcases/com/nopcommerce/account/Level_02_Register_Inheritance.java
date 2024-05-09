@@ -113,7 +113,7 @@ public class Level_02_Register_Inheritance extends BasePage {
 
     public String getRandomEmail() {
         Random rand = new Random();
-        return "automation" + rand.nextLong(9999) + "@gmail.com";
+        return "automation" + rand.nextInt(9999) + "@gmail.com";
     }
 
     @AfterClass

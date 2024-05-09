@@ -163,7 +163,7 @@ public class Level_03_Register_PageObject extends BasePage {
 
     public String getRandomEmail() {
         Random rand = new Random();
-        return "automation" + rand.nextLong(9999) + "@gmail.com";
+        return "automation" + rand.nextInt(9999) + "@gmail.com";
     }
 
     @AfterClass
