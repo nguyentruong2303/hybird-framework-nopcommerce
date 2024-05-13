@@ -1,11 +1,9 @@
 package commons;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -20,16 +18,13 @@ public class BaseTest {
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
         switch (browser) {
             case FIREFOX:
-                driver = WebDriverManager.firefoxdriver().create();
+                driver = new FirefoxDriver();
                 break;
             case CHROME:
-                driver = WebDriverManager.chromedriver().create();
+                driver = new ChromeDriver();
                 break;
             case EDGE:
-                driver = WebDriverManager.edgedriver().create();
-                break;
-            case OPERA:
-                driver = WebDriverManager.operadriver().create();
+                driver = new EdgeDriver();
                 break;
             default:
                 System.out.println("Browser is invalid");
@@ -42,16 +37,13 @@ public class BaseTest {
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
         switch (browser) {
             case FIREFOX:
-                driver = WebDriverManager.firefoxdriver().create();
+                driver = new FirefoxDriver();
                 break;
             case CHROME:
-                driver = WebDriverManager.chromedriver().create();
+                driver = new ChromeDriver();
                 break;
             case EDGE:
-                driver = WebDriverManager.edgedriver().create();
-                break;
-            case OPERA:
-                driver = WebDriverManager.operadriver().create();
+                driver = new EdgeDriver();
                 break;
             default:
                 System.out.println("Browser is invalid");
