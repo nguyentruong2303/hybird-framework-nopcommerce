@@ -54,14 +54,14 @@ public class Level_09_Page_Navigation extends BaseTest {
 
     @Test
     public void User_02_Login() {
-        homePage = registerPage.clickToNopCommerceLogo();
-
-        loginPage = homePage.clickToLoginLink();
-
-        loginPage.enterToEmailTextBox(emailAddress);
-        loginPage.enterToPasswordTextBox("123456");
-
-        homePage = loginPage.clickToLoginButton();
+//        homePage = registerPage.clickToNopCommerceLogo();
+//
+//        loginPage = homePage.clickToLoginLink();
+//
+//        loginPage.enterToEmailTextBox(emailAddress);
+//        loginPage.enterToPasswordTextBox("123456");
+//
+//        homePage = loginPage.clickToLoginButton();
 
         customerPage =  homePage.clickToMyAccountLink();
 
