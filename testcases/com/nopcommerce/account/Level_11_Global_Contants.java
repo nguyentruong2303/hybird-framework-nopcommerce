@@ -83,7 +83,7 @@ public class Level_11_Global_Contants extends BaseTest {
         adminLoginPage.enterEmailTextbox(GlobalContants.EMAIL_ADDRESS_ADMIN);
         adminLoginPage.enterPasswordTextbox(GlobalContants.PASSWORD_ADMIN);
         adminDashboard = adminLoginPage.clickLoginButton();
-       // Assert.assertTrue(adminLoginPage.isPageLoadedSuccess(driver));
+        Assert.assertTrue(adminLoginPage.isPageLoadedSuccess(driver));
 
 
     }
@@ -92,7 +92,7 @@ public class Level_11_Global_Contants extends BaseTest {
     public void User_03_Switch_Admin_To_User() {
         adminLoginPage = adminDashboard.clickToLogoutLink();
 
-       // Assert.assertTrue(adminDashboard.isPageLoadedSuccess(driver));
+       Assert.assertTrue(adminDashboard.isPageLoadedSuccess(driver));
 
 
         adminLoginPage.openPageUrl(driver, userUrlPage);

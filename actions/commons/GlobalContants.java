@@ -9,6 +9,6 @@ public class GlobalContants {
     public static final String EMAIL_ADDRESS_ADMIN = "admin@yourstore.com";
     public static final String PASSWORD_ADMIN = "admin";
 
-   // public static final Duration LONG_TIME = 0.5;
+    public static final long LONG_TIME = 20;
     public static final long SHORT_TIME = 5;
 }

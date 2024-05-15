@@ -6,15 +6,13 @@
     <parameter name="browser" value="Firefox"/>
     <parameter name="userUrlPage" value="https://demo.nopcommerce.com/"/>
     <classes>
-      <class name="com.nopcommerce.account.Level_10_Switch_Role">
+      <class name="com.nopcommerce.account.Level_11_Global_Contants">
         <methods>
           <include name="AfterClass"/>
-          <include name="BeforeClass"/>
-          <include name="User_01_Register_Success"/>
           <include name="User_03_Switch_Admin_To_User"/>
-          <include name="User_02_Switch_User_To_Admin"/>
+          <include name="BeforeClass"/>
         </methods>
-      </class> <!-- com.nopcommerce.account.Level_10_Switch_Role -->
+      </class> <!-- com.nopcommerce.account.Level_11_Global_Contants -->
     </classes>
   </test> <!-- Run on firefox(failed) -->
 </suite> <!-- Failed suite [NopCommerce] -->
