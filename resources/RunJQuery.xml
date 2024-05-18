@@ -2,13 +2,11 @@
 <suite parallel="false" name="NopCommerce">
   <test name="Run on firefox">
 	
-	<parameter name='userUrlPage' value='https://demo.nopcommerce.com/'/>
-	<parameter name='adminUrlPage' value='https://admin-demo.nopcommerce.com/login'/>
-	
+	<parameter name='url' value='https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/'/>
 	
 	<parameter name='browser' value='Firefox'/>
     <classes>
-      <class name="com.nopcommerce.account.Level_11_Global_Contants"/>
+      <class name="com.jquery.table.Level_13_Handle_DataTable"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
