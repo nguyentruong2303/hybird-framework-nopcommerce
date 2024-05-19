@@ -140,6 +140,10 @@ public class BasePage {
     public List<WebElement> getListWebElement(WebDriver driver, String locator) {
         return driver.findElements(getByLocator(locator));
     }
+    
+    public List<WebElement> getListWebElement(WebDriver driver, String locator, String... restParameter) {
+        return driver.findElements(getByLocator(getDynamicLocator(locator, restParameter)));
+    }
 
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
@@ -161,6 +165,10 @@ public class BasePage {
 
     public void selectItemInDropdown(WebDriver driver, String locator, String valueToSelect) {
         new Select(getWebElement(driver, locator)).selectByVisibleText(valueToSelect);
+    }
+    
+    public void selectItemInDropdown(WebDriver driver, String locator, String valueToSelect,String... restParameter) {
+        new Select(getWebElement(driver, getDynamicLocator(locator, restParameter))).selectByVisibleText(valueToSelect);
     }
 
     public void getSelectedItemInDropdown(WebDriver driver, String locator) {
@@ -218,10 +226,20 @@ public class BasePage {
     public int getListElementSize(WebDriver driver, String locator) {
         return getListWebElement(driver, locator).size();
     }
+    
+    public int getListElementSize(WebDriver driver, String locator, String... restParameter) {
+        return getListWebElement(driver, getDynamicLocator(locator, restParameter)).size();
+    }
 
     public void checkTheCheckBoxOrRadio(WebDriver driver, String locator) {
         if (!getWebElement(driver, locator).isSelected()) {
             clickToElement(driver, locator);
+        }
+    }
+    
+    public void checkTheCheckBoxOrRadio(WebDriver driver, String locator, String... restParameter) {
+        if (!getWebElement(driver, getDynamicLocator(locator, restParameter)).isSelected()) {
+            clickToElement(driver, getDynamicLocator(locator, restParameter));
         }
     }
 

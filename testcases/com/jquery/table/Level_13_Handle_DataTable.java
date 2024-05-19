@@ -25,8 +25,6 @@ public class Level_13_Handle_DataTable extends BaseTest {
         driver = getBrowserDriverWithUrl(browserName, url);
         homePage = PageGeneratorManager.getHomePageObject(driver);
     }
-
-    
     public void TC_01_Search_Data() {
     	homePage.inputToColumnTextboxByName("Females","384187");
     	homePage.sleepInSecond(2);
@@ -68,15 +66,14 @@ public class Level_13_Handle_DataTable extends BaseTest {
     	Assert.assertTrue(homePage.isPageActiveByNumber("10"));
     }
 
-    public void User_03_Displayed() {
+    public void TC_03_Displayed() {
     	Assert.assertTrue(homePage.isRowValuesDisplayed("384187","Afghanistan", "407124", "791312"));
     	Assert.assertTrue(homePage.isRowValuesDisplayed("283821","Algeria", "295140", "578961"));
     	Assert.assertTrue(homePage.isRowValuesDisplayed("750","Aruba", "756", "1504"));
 
     }
    
-    @Test
-    public void User_04_Switch_Page() {
+    public void TC_04_Switch_Page() {
     	homePage.clickToRowActionByCountryName("Afghanistan", "remove");
     	homePage.clickToRowActionByCountryName("AFRICA", "remove");
     	homePage.clickToRowActionByCountryName("Albania", "remove");
@@ -93,7 +90,31 @@ public class Level_13_Handle_DataTable extends BaseTest {
     	homePage.clickToRowActionByCountryName("Algeria", "edit");
     	homePage.refreshPageCurrent(driver);
     }
+    
+    public void TC_05_Get_All_Data_Table() {
+    	homePage.getAllPageValuesByColumnName("Country");
+    	
+    	homePage.getAllPageValuesByColumnName("Males");
 
+    }
+    
+    @Test
+    public void TC_06_Action_By_Index() {
+    	homePage.openPageUrl(driver, "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/");
+    	
+    	homePage.inputToTextBoxByColumnNameAndRowIndex("Company", "2", "Ronadol");
+    	
+    	homePage.inputToTextBoxByColumnNameAndRowIndex("Contact Person", "3", "Por");
+    	
+    	homePage.selectDropDownByColumnNameAndRowIndex("Country", "1", "Hong Kong");
+    	
+    	homePage.selectDropDownByColumnNameAndRowIndex("Country", "2", "Hong Kong");
+
+    	homePage.clickCheckboxByColumnNameAndRowIndex("NPO?", "2");
+    	
+    	homePage.clickCheckboxByColumnNameAndRowIndex("NPO?", "3");
+
+    }
 
     @AfterClass
     public void AfterClass() {
