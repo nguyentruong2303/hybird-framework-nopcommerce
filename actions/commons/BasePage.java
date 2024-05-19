@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageUIs.user.BasePageUI;
+
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -161,6 +163,17 @@ public class BasePage {
     public void sendkeyToElement(WebDriver driver, String locator, String valueToSend, String... restParameter) {
         getWebElement(driver, getDynamicLocator(locator, restParameter)).clear();
         getWebElement(driver, getDynamicLocator(locator, restParameter)).sendKeys(valueToSend);
+    }
+    
+    public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+    	String filePath = GlobalContants.FILE_IMAGE_PATH;
+    	
+    	String fullFileName = "";
+    	for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+    	fullFileName.trim();
+    	getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
     }
 
     public void selectItemInDropdown(WebDriver driver, String locator, String valueToSelect) {

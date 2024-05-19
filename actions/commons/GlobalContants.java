@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.time.Duration;
 
 public class GlobalContants {
@@ -8,6 +9,8 @@ public class GlobalContants {
 
     public static final String EMAIL_ADDRESS_ADMIN = "admin@yourstore.com";
     public static final String PASSWORD_ADMIN = "admin";
+    public static final String PROJECT_PATH = System.getProperty("user.dir");
+    public static final String FILE_IMAGE_PATH = PROJECT_PATH + File.separator + "Image" + File.separator;
 
     public static final long LONG_TIME = 20;
     public static final long SHORT_TIME = 5;

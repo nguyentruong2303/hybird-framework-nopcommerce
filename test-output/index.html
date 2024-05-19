@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-NopCommerce" class="navigator-link">
-              <span class="suite-name border-passed">NopCommerce</span>
+              <span class="suite-name border-failed">NopCommerce</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-NopCommerce" class="hide-methods passed suite-NopCommerce"> (hide)</a> <!-- hide-methods passed suite-NopCommerce -->
-                      <a href="#" panel-name="suite-NopCommerce" class="show-methods passed suite-NopCommerce"> (show)</a> <!-- show-methods passed suite-NopCommerce -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-NopCommerce" class="hide-methods failed suite-NopCommerce"> (hide)</a> <!-- hide-methods failed suite-NopCommerce -->
+                      <a href="#" panel-name="suite-NopCommerce" class="show-methods failed suite-NopCommerce"> (show)</a> <!-- show-methods failed suite-NopCommerce -->
                     </span>
-                    <div class="method-list-content passed suite-NopCommerce">
+                    <div class="method-list-content failed suite-NopCommerce">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-NopCommerce" title="com.jquery.table.Level_13_Handle_DataTable" class="method navigator-link" hash-for-method="TC_06_Action_By_Index">TC_06_Action_By_Index</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-NopCommerce" title="com.jquery.upload.Level_14_Upload_File" class="method navigator-link" hash-for-method="TC_01_Upload_Single_File">TC_01_Upload_Single_File</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-NopCommerce -->
+                    </div> <!-- method-list-content failed suite-NopCommerce -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,42 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-NopCommerce" class="panel NopCommerce">
-          <div class="suite-NopCommerce-class-passed">
+          <div class="suite-NopCommerce-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.jquery.table.Level_13_Handle_DataTable</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.jquery.upload.Level_14_Upload_File</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_06_Action_By_Index">
-                  </a> <!-- TC_06_Action_By_Index -->
-                  <span class="method-name">TC_06_Action_By_Index</span>
+                  <a name="TC_01_Upload_Single_File">
+                  </a> <!-- TC_01_Upload_Single_File -->
+                  <span class="method-name">TC_01_Upload_Single_File</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: File not found: 
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [4a9cc481-979b-4c53-bc73-d2b2ee980761, sendKeysToElement {value=[Ljava.lang.CharSequence;@2dca0d64, id=95fdaaee-f241-442b-9443-9fe40ba11189}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 126.0, moz:accessibilityChecks: false, moz:buildID: 20240509170740, moz:debuggerAddress: 127.0.0.1:28251, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27820, moz:profile: C:\Users\t002404\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:28251/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (4a9cc481-979b-4c53-bc73-d2b2ee980761)] -&gt; css selector: input[type=&apos;file&apos;]]
+Session ID: 4a9cc481-979b-4c53-bc73-d2b2ee980761
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at commons.BasePage.uploadMultipleFiles(BasePage.java:176)
+	at com.jquery.upload.Level_14_Upload_File.TC_01_Upload_Single_File(Level_14_Upload_File.java:36)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-NopCommerce-class-passed -->
+          </div> <!-- suite-NopCommerce-class-failed -->
         </div> <!-- panel NopCommerce -->
         <div panel-name="test-xml-NopCommerce" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -144,9 +165,9 @@
 &lt;suite name=&quot;NopCommerce&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Run on firefox&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Firefox&quot;/&gt;
-    &lt;parameter name=&quot;url&quot; value=&quot;https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://blueimp.github.io/jQuery-File-Upload/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.jquery.table.Level_13_Handle_DataTable&quot;/&gt;
+      &lt;class name=&quot;com.jquery.upload.Level_14_Upload_File&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on firefox --&gt;
 &lt;/suite&gt; &lt;!-- NopCommerce --&gt;
@@ -188,14 +209,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_06_Action_By_Index')
-data.setCell(0, 2, 'com.jquery.table.Level_13_Handle_DataTable')
-data.setCell(0, 3, 4177);
+data.setCell(0, 1, 'TC_01_Upload_Single_File')
+data.setCell(0, 2, 'com.jquery.upload.Level_14_Upload_File')
+data.setCell(0, 3, 28);
 window.suiteTableData['NopCommerce']= { tableData: data, tableDiv: 'times-div-NopCommerce'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 28 ms</span>
               <div id="times-div-NopCommerce">
               </div> <!-- times-div-NopCommerce -->
             </div> <!-- times-div -->
@@ -221,18 +242,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.jquery.table.Level_13_Handle_DataTable</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.jquery.upload.Level_14_Upload_File</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">BeforeClass(Firefox, https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/)</span>
+                <span class="method-name">BeforeClass(Firefox, https://blueimp.github.io/jQuery-File-Upload/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TC_06_Action_By_Index</span>
-                <span class="method-start">8900 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_Upload_Single_File</span>
+                <span class="method-start">3653 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">AfterClass</span>
-                <span class="method-start">13079 ms</span>
+                <span class="method-start">3683 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
