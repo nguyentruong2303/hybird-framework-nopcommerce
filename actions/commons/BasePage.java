@@ -173,6 +173,7 @@ public class BasePage {
 			fullFileName = fullFileName + filePath + file + "\n";
 		}
     	fullFileName.trim();
+    	System.out.println(fullFileName);
     	getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
     }
 

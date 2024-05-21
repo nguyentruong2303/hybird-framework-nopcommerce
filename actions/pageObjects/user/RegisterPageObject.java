@@ -79,4 +79,9 @@ public class RegisterPageObject extends BasePage {
         waitForElementVisible(driver, RegisterPageUI.REGISTRATION_COMPLETED_MESSAGE);
         return getTextElement(driver, RegisterPageUI.REGISTRATION_COMPLETED_MESSAGE);
     }
+
+	public boolean isRegisterButtonDisplayed() {
+		waitForElementVisible(driver, RegisterPageUI.REGISTER_BUTTON);
+		return isElementDisplayed(driver, RegisterPageUI.REGISTER_BUTTON);
+	}
 }

@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import pageObjects.jquery.HomePageObject;
 import pageObjects.jquery.PageGeneratorManager;
 import pageObjects.jquery.UploadPageObject;
+import pageUIs.user.BasePageUI;
 
 public class Level_14_Upload_File extends BaseTest {
 
@@ -22,6 +23,7 @@ public class Level_14_Upload_File extends BaseTest {
     private String halongCity = "Ha Long.jpg";
     private String hoianCity = "Hoi An.jpg";
     private String ninhbinhCity = "Ninh Binh.jpg";
+    private String japan = "ookunoshima.jpg";
 
 
     @Parameters({"browser", "url"})
@@ -33,14 +35,19 @@ public class Level_14_Upload_File extends BaseTest {
     
     @Test
     public void TC_01_Upload_Single_File() {
-    	uploadPage.uploadMultipleFiles(driver, halongCity);
+    	uploadPage.getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys("C:\\Users\\t002404\\Downloads\\LearnAuto\\hybird-framework-nopcommerce\\image\\ookunoshima.jpg");
     	uploadPage.sleepInSecond(2);
     	
-    	uploadPage.uploadMultipleFiles(driver, hoianCity);
-    	uploadPage.sleepInSecond(2);
+    	
 
-    	uploadPage.uploadMultipleFiles(driver, ninhbinhCity);
+    	uploadPage.uploadMultipleFiles(driver, "Ha Long.jpg");
     	uploadPage.sleepInSecond(2);
+//    	
+//    	uploadPage.uploadMultipleFiles(driver, hoianCity);
+//    	uploadPage.sleepInSecond(2);
+//
+//    	uploadPage.uploadMultipleFiles(driver, ninhbinhCity);
+//    	uploadPage.sleepInSecond(2);
 
     }
     
