@@ -1,4 +1,4 @@
-package com.nopcommerce.account;
+package javaBasic;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.user.*;
 
-public class Level_15_Hard_Assert extends BaseTest {
+public class Level_13_Hard_Assert extends BaseTest {
 
     WebDriver driver;
     private HomePageObject homePage;

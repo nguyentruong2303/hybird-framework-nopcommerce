@@ -1,4 +1,4 @@
-package com.nopcommerce.account;
+package javaBasic;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -17,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 
 import pageObjects.user.*;
 
-public class Level_16_Soft_Assert extends BaseTest {
+public class Level_14_Soft_Assert extends BaseTest {
 
 	WebDriver driver;
 	SoftAssert soft;

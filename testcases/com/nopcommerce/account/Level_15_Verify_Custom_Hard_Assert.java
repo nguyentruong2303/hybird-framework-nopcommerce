@@ -17,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 
 import pageObjects.user.*;
 
-public class Level_17_Verify_Custom_Hard_Assert extends BaseTest {
+public class Level_15_Verify_Custom_Hard_Assert extends BaseTest {
 
 	WebDriver driver;
 	RegisterPageObject registerPage;

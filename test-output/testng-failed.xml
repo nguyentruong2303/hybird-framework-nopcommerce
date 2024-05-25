@@ -7,13 +7,13 @@
   <test thread-count="5" name="Run on firefox(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert">
+      <class name="com.nopcommerce.account.Level_16_Log">
         <methods>
-          <include name="AfterClass"/>
           <include name="BeforeClass"/>
           <include name="User_01_Register_Success"/>
+          <include name="AfterClass"/>
         </methods>
-      </class> <!-- com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert -->
+      </class> <!-- com.nopcommerce.account.Level_16_Log -->
     </classes>
   </test> <!-- Run on firefox(failed) -->
 </suite> <!-- Failed suite [NopCommerce] -->

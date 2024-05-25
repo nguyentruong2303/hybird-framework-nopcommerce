@@ -9,20 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">NopCommerce</th></tr>
-<tr><td><a href="#t0">Run on firefox</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8,873</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Run on firefox</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,992</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">NopCommerce</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on firefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert</td><td><a href="#m0">User_01_Register_Success</a></td><td rowspan="1">1716270344292</td><td rowspan="1">2146</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">NopCommerce</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on firefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.nopcommerce.account.Level_16_Log</td><td><a href="#m0">User_01_Register_Success</a></td><td rowspan="1">1716606580269</td><td rowspan="1">3953</td></tr></tbody>
 </table>
-<h2>Run on firefox</h2><h3 id="m0">com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert#User_01_Register_Success</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Multiple failures (2):
+<h2>Run on firefox</h2><h3 id="m0">com.nopcommerce.account.Level_16_Log#User_01_Register_Success</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Multiple failures (2):
 Failure 1 of 2
-java.lang.AssertionError: expected [false] but found [true]
-	at commons.BaseTest.verifyFalse(BaseTest.java:82)
-	at com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert.User_01_Register_Success(Level_17_Verify_Custom_Hard_Assert.java:38)
+java.lang.AssertionError: expected [Last name is required] but found [Last name is required.]
+	at commons.BaseTest.verifyEquals(BaseTest.java:105)
+	at com.nopcommerce.account.Level_16_Log.User_01_Register_Success(Level_16_Log.java:52)
 
 Failure 2 of 2
 java.lang.AssertionError: expected [false] but found [true]
-	at commons.BaseTest.verifyFalse(BaseTest.java:82)
-	at com.nopcommerce.account.Level_17_Verify_Custom_Hard_Assert.User_01_Register_Success(Level_17_Verify_Custom_Hard_Assert.java:48)
-... Removed 54 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at commons.BaseTest.verifyFalse(BaseTest.java:91)
+	at com.nopcommerce.account.Level_16_Log.User_01_Register_Success(Level_16_Log.java:70)
+... Removed 55 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
