@@ -32,6 +32,9 @@ public class Level_17_Log2 extends BaseTest {
 
     @Test
     public void User_01_Register_Success() {
+    	
+    	log.info("test");
+
     	log.info("test");
     	
     	log.error("Register - Step 01: Verify Register Link is Displayed");	

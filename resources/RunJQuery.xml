@@ -8,7 +8,7 @@
 
 		<parameter name='browser' value='Firefox' />
 		<classes>
-			<class name="com.nopcommerce.account.Level_16_1_Log2" />
+			<class name="com.nopcommerce.account.Level_16_Log" />
 		</classes>
 
 	</test> <!--
