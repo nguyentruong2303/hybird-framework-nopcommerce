@@ -1,3 +1,4 @@
 /bin/
 /test-output/
-.idea/
+/.idea/
+/.settings/
