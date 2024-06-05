@@ -20,7 +20,7 @@ public class BaseTest {
     private WebDriver driver;
     
     public BaseTest() {
-    	log = LogManager.getLogger(getClass());
+    	log = LogManager.getLogger(BaseTest.class);
     }
    
 

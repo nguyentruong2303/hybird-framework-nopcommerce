@@ -5,8 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a503d9b-6eb2-48b2-92af-6b13412ffd99" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/selenium_server_standalone_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/RunTestCases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/RunTestCases.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/TestNGAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/TestNGAppender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/RunJQuery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/RunJQuery.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j.dtd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Default suite/Default test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Default suite/Default test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Default suite/Default test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Default suite/Default test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Default suite/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Default suite/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/NopCommerce/Run on firefox.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/NopCommerce/Run on firefox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/NopCommerce/Run on firefox.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/NopCommerce/Run on firefox.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.nopcommerce.account.Level_16_Log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.nopcommerce.account.Level_16_Log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Default suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default suite/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Default suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default suite/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Default suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default suite/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Default suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default suite/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Default suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default suite/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/NopCommerce/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/NopCommerce/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/NopCommerce/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/NopCommerce/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/NopCommerce/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/NopCommerce/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/NopCommerce/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/NopCommerce/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/NopCommerce/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/NopCommerce/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/account/Level_16_Log.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

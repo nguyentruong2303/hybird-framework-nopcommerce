@@ -1,6 +1,5 @@
 package commons;
 
-
 import java.io.Serializable;
 
 import org.apache.logging.log4j.core.Appender;
