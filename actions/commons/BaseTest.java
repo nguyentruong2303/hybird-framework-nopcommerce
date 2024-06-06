@@ -16,7 +16,12 @@ import java.util.concurrent.TimeUnit;
 
 
 public class BaseTest {
-    protected final Logger log;
+	
+    public WebDriver getDriver() {
+		return driver;
+	}
+
+	protected final Logger log;
     private WebDriver driver;
     
     public BaseTest() {
