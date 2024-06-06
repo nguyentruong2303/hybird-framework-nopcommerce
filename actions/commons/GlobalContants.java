@@ -14,4 +14,7 @@ public class GlobalContants {
 
     public static final long LONG_TIME = 20;
     public static final long SHORT_TIME = 5;
+    
+    public static final String JAVA_VERSION = System.getProperty("java.version");
+    
 }

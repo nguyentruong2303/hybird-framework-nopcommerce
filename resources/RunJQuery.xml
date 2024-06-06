@@ -4,15 +4,14 @@
 		
 		<listeners>
 			<listener class-name='commons.MethodListener'/>
-			<listener class-name='org.uncommons.reportng.HTMLReporter'/>
-			<listener class-name='org.uncommons.reportng.JUnitXMLReporter'/>
-			<listener class-name='reportConfig.ReportNGListener'/>
+
+			<listener class-name='reportConfig.ExtentTestListener'/>
 
 		</listeners>
 
 		<parameter name='browser' value='Firefox' />
 		<classes>
-			<class name="com.nopcommerce.account.Level_17_ReportNG" />
+			<class name="com.nopcommerce.account.Level_18_Extent_V5" />
 		</classes>
 
 	</test> <!--

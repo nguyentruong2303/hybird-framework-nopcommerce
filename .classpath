@@ -14,11 +14,11 @@
 	<classpathentry kind="lib" path="libSelenium/selenium-server-4.11.0.jar"/>
 	<classpathentry kind="lib" path="libLog4Jver2/log4j-api-2.19.0.jar"/>
 	<classpathentry kind="lib" path="libLog4Jver2/log4j-core-2.19.0.jar"/>
-	<classpathentry kind="lib" path="libReportNG/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="libReportNG/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
-	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
-	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4-sources.jar"/>
-	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/extentreports-5.1.0.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/freemarker-2.3.32.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/lombok-1.18.26.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/reactive-streams-1.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/rxjava-3.1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
