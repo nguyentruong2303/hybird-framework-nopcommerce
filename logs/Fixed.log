@@ -178,3 +178,63 @@
 [06-06-2024 20:59:23.923 INFO commons.BaseTest] - Register - Step 04: Enter to Password text with value is 123456
 [06-06-2024 20:59:23.949 INFO commons.BaseTest] - Register - Step 05: Click to Register Button
 [06-06-2024 20:59:24.502 INFO commons.BaseTest] - Register - Step 06: Verify success message is displayed
+[09-06-2024 15:52:10.114 INFO commons.BaseTest] - Step 01 - Click to Create new account button
+[09-06-2024 15:52:10.383 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Displayed
+[09-06-2024 15:52:10.792 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Displayed
+[09-06-2024 15:52:10.812 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Displayed
+[09-06-2024 15:52:10.834 INFO commons.BaseTest] - Step 05 - Enter Email textbox with valueautomation7356@gmail.com
+[09-06-2024 15:52:10.873 INFO commons.BaseTest] - Step 06 - Verify Confirm email textbox is Displayed
+[09-06-2024 15:52:10.892 INFO commons.BaseTest] - Step 07 - Verify Password textbox is Displayed
+[09-06-2024 15:52:10.917 INFO commons.BaseTest] - Step 01 - Clear data Email textbox with value
+[09-06-2024 15:52:10.954 INFO commons.BaseTest] - Step 02 - Verify Confirm email textbox is Displayed
+[09-06-2024 15:52:10.977 INFO commons.BaseTest] - Step 01 - Click to Already have an account link
+[09-06-2024 16:01:33.535 INFO commons.BaseTest] - Step 01 - Click to Create new account button
+[09-06-2024 16:01:34.358 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Displayed
+[09-06-2024 16:01:34.381 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Displayed
+[09-06-2024 16:01:34.402 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Displayed
+[09-06-2024 16:01:34.419 INFO commons.BaseTest] - Step 05 - Enter Email textbox with valueautomation8690@gmail.com
+[09-06-2024 16:01:34.475 INFO commons.BaseTest] - Step 06 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:01:34.494 INFO commons.BaseTest] - Step 07 - Verify Password textbox is Displayed
+[09-06-2024 16:01:34.512 INFO commons.BaseTest] - Step 01 - Clear data Email textbox with value
+[09-06-2024 16:01:37.548 INFO commons.BaseTest] - Step 02 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:02:00.923 INFO commons.BaseTest] - Step 01 - Click to Already have an account link
+[09-06-2024 16:04:11.197 INFO commons.BaseTest] - Step 01 - Click to Create new account button
+[09-06-2024 16:04:11.467 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Displayed
+[09-06-2024 16:04:11.907 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Displayed
+[09-06-2024 16:04:11.928 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Displayed
+[09-06-2024 16:04:11.951 INFO commons.BaseTest] - Step 05 - Enter Email textbox with valueautomation504@gmail.com
+[09-06-2024 16:04:11.988 INFO commons.BaseTest] - Step 06 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:04:12.008 INFO commons.BaseTest] - Step 07 - Verify Password textbox is Displayed
+[09-06-2024 16:04:12.029 INFO commons.BaseTest] - Step 01 - Clear data Email textbox with value
+[09-06-2024 16:04:15.064 INFO commons.BaseTest] - Step 02 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:04:15.104 INFO commons.BaseTest] - Step 01 - Click to Already have an account link
+[09-06-2024 16:06:19.002 INFO commons.BaseTest] - Step 01 - Click to Create new account button
+[09-06-2024 16:06:19.263 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Displayed
+[09-06-2024 16:06:19.658 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Displayed
+[09-06-2024 16:06:19.676 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Displayed
+[09-06-2024 16:06:19.697 INFO commons.BaseTest] - Step 05 - Enter Email textbox with valueautomation9995@gmail.com
+[09-06-2024 16:06:19.736 INFO commons.BaseTest] - Step 06 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:06:19.758 INFO commons.BaseTest] - Step 07 - Verify Password textbox is Displayed
+[09-06-2024 16:06:19.778 INFO commons.BaseTest] - Step 01 - Clear data Email textbox with value
+[09-06-2024 16:06:22.822 INFO commons.BaseTest] - Step 02 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:06:22.856 INFO commons.BaseTest] - Step 01 - Open Home Page
+[09-06-2024 16:06:26.335 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Undisplayed
+[09-06-2024 16:06:51.413 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Undisplayed
+[09-06-2024 16:07:16.447 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Undisplayed
+[09-06-2024 16:07:41.492 INFO commons.BaseTest] - Step 05 - Verify Confirm email textbox is Undisplayed
+[09-06-2024 16:08:06.529 INFO commons.BaseTest] - Step 06 - Verify Password textbox is Undisplayed
+[09-06-2024 16:09:07.494 INFO commons.BaseTest] - Step 01 - Click to Create new account button
+[09-06-2024 16:09:08.326 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Displayed
+[09-06-2024 16:09:08.351 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Displayed
+[09-06-2024 16:09:08.370 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Displayed
+[09-06-2024 16:09:08.388 INFO commons.BaseTest] - Step 05 - Enter Email textbox with valueautomation4768@gmail.com
+[09-06-2024 16:09:08.443 INFO commons.BaseTest] - Step 06 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:09:08.463 INFO commons.BaseTest] - Step 07 - Verify Password textbox is Displayed
+[09-06-2024 16:09:08.482 INFO commons.BaseTest] - Step 01 - Clear data Email textbox with value
+[09-06-2024 16:09:11.524 INFO commons.BaseTest] - Step 02 - Verify Confirm email textbox is Displayed
+[09-06-2024 16:09:11.545 INFO commons.BaseTest] - Step 01 - Open Home Page
+[09-06-2024 16:09:15.131 INFO commons.BaseTest] - Step 02 - Verify FirstName textbox is Undisplayed
+[09-06-2024 16:09:20.163 INFO commons.BaseTest] - Step 03 - Verify Surname textbox is Undisplayed
+[09-06-2024 16:09:25.194 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Undisplayed
+[09-06-2024 16:09:30.222 INFO commons.BaseTest] - Step 05 - Verify Confirm email textbox is Undisplayed
+[09-06-2024 16:09:35.244 INFO commons.BaseTest] - Step 06 - Verify Password textbox is Undisplayed

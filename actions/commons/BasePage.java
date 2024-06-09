@@ -267,6 +267,23 @@ public class BasePage {
         return getWebElement(driver, locator).isDisplayed();
     }
     
+    public void setImplicitWait(WebDriver driver, long timeout) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+	}
+    
+    public boolean isElementUndisplayed(WebDriver driver, String locator) {
+    	setImplicitWait(driver, shortTimeout);
+    	List<WebElement> element = getListWebElement(driver, locator);
+    	setImplicitWait(driver, longTimeout);
+    	if (element.size() > 0 && element.get(0).isDisplayed()) {
+			return false;
+		} else if (element.size() > 0 && !element.get(0).isDisplayed()) {
+			return true;
+		} else {
+	    	return true;
+		}
+    }
+    
     public boolean isElementDisplayed(WebDriver driver, String locator, String... restParameter) {
         return getWebElement(driver, getDynamicLocator(locator, restParameter)).isDisplayed();
     }
@@ -437,6 +454,8 @@ public class BasePage {
         };
         return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
+    public long shortTimeout = GlobalContants.SHORT_TIME;
+
     public long longTimeout = GlobalContants.LONG_TIME;
 
 
