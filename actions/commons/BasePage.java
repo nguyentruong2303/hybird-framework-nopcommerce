@@ -232,6 +232,16 @@ public class BasePage {
     public String getCssValue(WebDriver driver, String locator, String CssValue) {
         return getWebElement(driver, locator).getCssValue(CssValue);
     }
+    
+    public Set<Cookie> getBrowserCookies(WebDriver driver) {
+    	return driver.manage().getCookies();
+    }
+    
+    public void setCookies(WebDriver driver, Set<Cookie> cookies) {
+    	for (Cookie cookie : cookies) {
+			driver.manage().addCookie(cookie);
+		}
+    }
 
     public String convertRGBAToHexaColor(WebDriver driver, String locator) {
         return Color.fromString(getCssValue(driver, locator, "background-color")).asHex().toUpperCase();

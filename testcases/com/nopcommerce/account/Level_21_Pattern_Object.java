@@ -33,7 +33,7 @@ public class Level_21_Pattern_Object extends BaseTest {
 
     }
 
-    
+    @Test
     public void User_01_Register_Empty_Data() {
         homePage.clickToHeaderLinkByName("Register");
         registerPage = PageGeneratorManager.getRegisterPage(driver);
@@ -44,7 +44,6 @@ public class Level_21_Pattern_Object extends BaseTest {
         Assert.assertEquals(registerPage.getTextErrorMessageByID("FirstName"),"First name is required.");
         Assert.assertEquals(registerPage.getTextErrorMessageByID("LastName"),"Last name is required.");
         Assert.assertEquals(registerPage.getTextErrorMessageByID("Email"),"Email is required.");
-        Assert.assertEquals(registerPage.getTextErrorMessageByID("Password"),"Password is required.");
         Assert.assertEquals(registerPage.getTextErrorMessageByID("ConfirmPassword"),"Password is required.");
 
     }

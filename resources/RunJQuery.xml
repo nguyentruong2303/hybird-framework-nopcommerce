@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="NopCommerce">
-	<test name="Run on firefox">
+	<test name="Run on firefox" preserve-order="true">
 		
 		<listeners>
 			<listener class-name='commons.MethodListener'/>
-
 			<!-- <listener class-name='reportConfig.ExtentTestListener'/>-->
-
 		</listeners>
 
-		<parameter name='browser' value='Firefox' />
+		<parameter name='browser' value='chrome' />
 		<classes>
-			<class name="com.nopcommerce.account.Level_21_Pattern_Object" />
+			<class name="com.nopcommerce.cookie.Common_Register_Cookie" />
+			
+			<class name="com.nopcommerce.cookie.Product" />
+			<class name="com.nopcommerce.cookie.Order" />
+			<class name="com.nopcommerce.cookie.Payment" />
+
 		</classes>
 
 	</test> <!--
