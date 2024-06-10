@@ -7,14 +7,9 @@
 			<!-- <listener class-name='reportConfig.ExtentTestListener'/>-->
 		</listeners>
 
-		<parameter name='browser' value='chrome' />
+		<parameter name='browser' value='firefox' />
 		<classes>
-			<class name="com.nopcommerce.cookie.Common_Register_Cookie" />
-			
-			<class name="com.nopcommerce.cookie.Product" />
-			<class name="com.nopcommerce.cookie.Order" />
-			<class name="com.nopcommerce.cookie.Payment" />
-
+			<class name="com.nopcommerce.account.Level_22_Close_Browser" />
 		</classes>
 
 	</test> <!--

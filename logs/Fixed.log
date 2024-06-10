@@ -238,3 +238,5 @@
 [09-06-2024 16:09:25.194 INFO commons.BaseTest] - Step 04 - Verify Email textbox is Undisplayed
 [09-06-2024 16:09:30.222 INFO commons.BaseTest] - Step 05 - Verify Confirm email textbox is Undisplayed
 [09-06-2024 16:09:35.244 INFO commons.BaseTest] - Step 06 - Verify Password textbox is Undisplayed
+[10-06-2024 20:48:46.433 INFO commons.BaseTest] - OS name = windows 11
+[10-06-2024 20:48:46.435 INFO commons.BaseTest] - Driver instance name = firefoxdriver: firefox on windows (e90a52db-322e-4107-ae08-8176f49fc68b)
