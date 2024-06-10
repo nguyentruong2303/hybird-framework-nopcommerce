@@ -1,13 +1,15 @@
 package pageObjects.user;
 
+import commons.BaseElement;
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.user.HomePageUI;
 
-public class HomePageObject extends BasePage {
+public class HomePageObject extends BaseElement {
 
     public HomePageObject(WebDriver driver) {
+    	super(driver);
         this.driver = driver;
     }
 
@@ -39,4 +41,5 @@ public class HomePageObject extends BasePage {
 		waitForElementVisible(driver, HomePageUI.REGISTER_LINK);
 		return isElementDisplayed(driver, HomePageUI.REGISTER_LINK);
 	}
+
 }

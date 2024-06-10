@@ -5,13 +5,13 @@
 		<listeners>
 			<listener class-name='commons.MethodListener'/>
 
-			<listener class-name='reportConfig.ExtentTestListener'/>
+			<!-- <listener class-name='reportConfig.ExtentTestListener'/>-->
 
 		</listeners>
 
 		<parameter name='browser' value='Firefox' />
 		<classes>
-			<class name="com.nopcommerce.account.Level_18_Extent_V5" />
+			<class name="com.nopcommerce.account.Level_21_Pattern_Object" />
 		</classes>
 
 	</test> <!--

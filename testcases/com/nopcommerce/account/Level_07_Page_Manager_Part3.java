@@ -35,6 +35,7 @@ public class Level_07_Page_Manager_Part3 extends BaseTest {
         registerPage = homePage.clickToRegisterLink();
 
         registerPage.clickToElementRegisterButton();
+        registerPage.sleepInSecond(3);
 
         Assert.assertEquals(registerPage.getTextFirstNameErrorMessage(),"First name is required.");
         Assert.assertEquals(registerPage.getTextLastNameErrorMessage(),"Last name is required.");

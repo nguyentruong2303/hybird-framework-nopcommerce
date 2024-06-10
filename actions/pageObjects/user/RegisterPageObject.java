@@ -1,12 +1,14 @@
 package pageObjects.user;
 
+import commons.BaseElement;
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.user.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage {
+public class RegisterPageObject extends BaseElement {
 
     public RegisterPageObject(WebDriver driver) {
+    	super(driver);
         this.driver = driver;
     }
 
@@ -44,12 +46,6 @@ public class RegisterPageObject extends BasePage {
         return getTextElement(driver, RegisterPageUI.CONFIRM_PASSWORD_ERROR_MESSAGE);
     }
 
-    public HomePageObject clickToNopCommerceLogo() {
-        waitForElementClickable(driver, RegisterPageUI.NOP_COMMERCE_LOGO);
-        clickToElement(driver, RegisterPageUI.NOP_COMMERCE_LOGO);
-        return new HomePageObject(driver);
-    }
-
     public void enterToFirstNameTextBox(String firstName) {
         waitForElementVisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
         sendkeyToElement(driver, RegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
@@ -84,4 +80,5 @@ public class RegisterPageObject extends BasePage {
 		waitForElementVisible(driver, RegisterPageUI.REGISTER_BUTTON);
 		return isElementDisplayed(driver, RegisterPageUI.REGISTER_BUTTON);
 	}
+
 }
