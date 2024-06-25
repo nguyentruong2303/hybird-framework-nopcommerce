@@ -166,7 +166,7 @@ public class BasePage {
     }
     
     public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
-    	String filePath = GlobalContants.FILE_IMAGE_PATH;
+    	String filePath = GlobalConstants.FILE_IMAGE_PATH;
     	
     	String fullFileName = "";
     	for (String file : fileNames) {
@@ -301,6 +301,10 @@ public class BasePage {
     public boolean isElementSelected(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isSelected();
     }
+    
+    public boolean isElementSelected(WebDriver driver, String locator, String... restParameter) {
+        return getWebElement(driver, getDynamicLocator(locator, restParameter)).isSelected();
+    }
 
     public boolean isElementEnabled(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isEnabled();
@@ -367,6 +371,10 @@ public class BasePage {
 
     public void clickToElementByJS(WebDriver driver, String locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", getWebElement(driver, locator));
+    }
+    
+    public void clickToElementByJS(WebDriver driver, String locator, String...restParameter) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", getWebElement(driver, getDynamicLocator(locator, restParameter)));
     }
 
     public void scrollToElement(WebDriver driver, String locator) {
@@ -464,9 +472,9 @@ public class BasePage {
         };
         return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
-    public long shortTimeout = GlobalContants.SHORT_TIME;
+    public long shortTimeout = GlobalConstants.SHORT_TIME;
 
-    public long longTimeout = GlobalContants.LONG_TIME;
+    public long longTimeout = GlobalConstants.LONG_TIME;
 
 
 }

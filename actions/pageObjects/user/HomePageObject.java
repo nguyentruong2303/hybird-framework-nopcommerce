@@ -3,6 +3,8 @@ package pageObjects.user;
 import commons.BaseElement;
 import commons.BasePage;
 import commons.PageGeneratorManager;
+import io.qameta.allure.Step;
+
 import org.openqa.selenium.WebDriver;
 import pageUIs.user.HomePageUI;
 
@@ -14,6 +16,7 @@ public class HomePageObject extends BaseElement {
     }
 
     WebDriver driver;
+    
     public RegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
         clickToElement(driver,HomePageUI.REGISTER_LINK);

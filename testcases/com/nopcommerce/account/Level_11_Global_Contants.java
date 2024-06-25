@@ -1,7 +1,7 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.GlobalContants;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -34,8 +34,8 @@ public class Level_11_Global_Contants extends BaseTest {
 
     private AdminDashboardPageObject adminDashboard;
 
-    String userUrlPage = GlobalContants.END_USER_URL;
-    String adminUrlPage =  GlobalContants.ADMIN_PAGE_URL;
+    String userUrlPage = GlobalConstants.END_USER_URL;
+    String adminUrlPage =  GlobalConstants.ADMIN_PAGE_URL;
 
 
     @Parameters("browser")
@@ -80,8 +80,8 @@ public class Level_11_Global_Contants extends BaseTest {
 
         adminLoginPage = PageGeneratorManager.getAdminLogin(driver);
 
-        adminLoginPage.enterEmailTextbox(GlobalContants.EMAIL_ADDRESS_ADMIN);
-        adminLoginPage.enterPasswordTextbox(GlobalContants.PASSWORD_ADMIN);
+        adminLoginPage.enterEmailTextbox(GlobalConstants.EMAIL_ADDRESS_ADMIN);
+        adminLoginPage.enterPasswordTextbox(GlobalConstants.PASSWORD_ADMIN);
         adminDashboard = adminLoginPage.clickLoginButton();
         Assert.assertTrue(adminLoginPage.isPageLoadedSuccess(driver));
 

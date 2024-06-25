@@ -2,7 +2,7 @@ package javaBasic;
 
 import java.io.File;
 
-import commons.GlobalContants;
+import commons.GlobalConstants;
 
 public class Topic_01_Upload {
 	
@@ -17,7 +17,7 @@ public class Topic_01_Upload {
 //		System.out.println(filePath);
 		
 		
-   	String filePath = GlobalContants.FILE_IMAGE_PATH;
+   	String filePath = GlobalConstants.FILE_IMAGE_PATH;
     	
    	
    	

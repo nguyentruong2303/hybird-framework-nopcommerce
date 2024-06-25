@@ -9,7 +9,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -163,4 +165,30 @@ public class BaseTest {
 		}
 		return status;
 	}
+//	
+//	@BeforeSuite
+//	public void deleteFileInReport() {
+//		// Remove all file in ReportNG screenshot (image)
+//		deleteAllFileInFolder("reportNGImage");
+//
+//		// Remove all file in Allure attachment (json file)
+//		deleteAllFileInFolder("allure-json");
+//	}
+//
+//	public void deleteAllFileInFolder(String folderName) {
+//		try {
+//			String pathFolderDownload = GlobalConstants.PROJECT_PATH + File.separator + folderName;
+//			File file = new File(pathFolderDownload);
+//			File[] listOfFiles = file.listFiles();
+//			if (listOfFiles.length != 0) {
+//				for (int i = 0; i < listOfFiles.length; i++) {
+//					if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+//						new File(listOfFiles[i].toString()).delete();
+//					}
+//				}
+//			}
+//		} catch (Exception e) {
+//			System.out.print(e.getMessage());
+//		}
+//	}
 }
